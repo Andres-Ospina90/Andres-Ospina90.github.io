@@ -1,0 +1,75 @@
+@import 'reset.css';
+
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#container{
+    background: #ccc;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#home{
+    background-color: darkgreen;
+    min-height: 100vh;
+}
+#tecnologias{
+    background-color: cyan;
+    min-height: 100vh;
+}
+#contacto{
+    background-color: red;
+    min-height: 100vh;
+}
+.header{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    /*height: 72px;
+    overflow: hidden;*/
+}
+.header__title, .header__subtitle{
+    margin: 0 0 0.5rem;
+}
+.header__menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu__boton{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0.2rem;
+}
+.perfil__figure{
+    margin: 10px auto;
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid black;
+    overflow: hidden;
+    max-width: 220px;
+}
+.perfil__figure figcaption {
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    width: 300px;
+    height: 80px;
+    left: calc(50% - 150px);
+    top: calc(50% - 40px);
+    top:50%;
+    font-size: 1rem;
+    transition: opacity 1s ease, font-size 1.5s ease;
+}
+.perfil__figure img{
+    width: 100%;
+}
+.perfil__figure:hover figcaption {
+    opacity: 1;
+    font-size: 2rem;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Andres - FullStack Developer</title>
+</head>
+
+<body>
+    <main id="container">
+        <header class="header">
+            <h1 class="header__title">Andrés Ospina</h1>
+            <h2 class="header__subtitle">FullStack Developer</h2>
+            <figure class="menu__icons">
+                <img src="Iconos/facebook2.svg" alt="Logo Facebook">
+                <img src="Iconos/linkedin2.svg" alt="Logo Linkedin">
+                <img src="Iconos/github2.svg" alt="Logo GitHub">
+                <img class="menu__boton" src="Iconos/menuBoton.svg" alt="Logo menu">
+            </figure>
+            <aside>
+                <nav class="header__menu">
+                    <a href="#home">Biografía</a>
+                    <a href="#tecnologias">Tecnologías</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+            </aside>
+        </header>
+        <section class="containerGrid">
+            <section id="home">
+                <figure class="home__figure">
+                    <img src="Imagenes/imgPortada.jpg" alt="Foto de Perfil">
+                    <figcaption>Andres Ospina</figcaption>
+                </figure>
+                <article class="home__biografia">
+                    <h2 class="home__biografia_titulo">Biografía</h2>
+                    <p Class="home__biografia_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, totam? Sunt quam, eligendi rerum veritatis, nesciunt iure reprehenderit nemo repellat soluta quisquam ullam dolor. Deleniti repellat, nihil temporibus natus, ullam minus
+                        tempore rerum minima perspiciatis inventore aliquam! Iusto doloribus corrupti nostrum, tenetur fugit fuga consequuntur ab maiores mollitia nihil repellat. Dolor accusamus laborum pariatur eaque natus adipisci quasi, fugiat, libero
+                        odio accusantium, iste ducimus reiciendis sequi sint asperiores atque neque officiis sapiente! Pariatur error facere tempora ducimus perspiciatis nulla corporis aut quaerat quibusdam. Numquam, quidem. Lorem ipsum, dolor sit amet
+                        consectetur adipisicing elit. Architecto numquam corrupti adipisci omnis nemo magnam sunt optio animi laboriosam. Hic omnis quia, reiciendis dolorem beatae rerum soluta cum explicabo ipsum? Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Illum, labore, aliquid quis delectus impedit iusto perferendis optio necessitatibus iste officiis nesciunt, soluta odit ullam exercitationem vitae dolores blanditiis cumque repellendus? Lorem ipsum dolor sit,
+                        amet consectetur adipisicing elit. Debitis alias sunt totam porro sapiente laboriosam, accusantium aperiam tempora culpa dicta? Eos qui quae numquam atque, libero expedita, quod maxime quia quidem architecto debitis consequatur
+                        sed animi ab quas perferendis optio sit corporis quaerat necessitatibus, molestias sunt. Laborum repellendus tenetur praesentium!
+                    </p>
+                </article>
+            </section>
+
+
+
+            <section id="tecnologias">
+                <h2>Tecnologias</h2>
+                <figure class="tecnologias__img">
+                    <img src="Imagenes/html-5.png" alt="logo html5">
+                    <img src="Imagenes/css-3.png" alt="logo css3">
+                    <img src="Imagenes/javascript.png" alt="logo javascript">
+                    <img src="Imagenes/git.png" alt="logo git">
+                    <img src="Imagenes/php.png" alt="logo php">
+                    <img src="Imagenes/docker.png" alt="logo docker">
+                    <img src="Imagenes/nodejs.png" alt="logo nodejs">
+                </figure>
+            </section>
+            <section id="contacto" class="mediaconta">
+                <!--<form method="POST" action="miservidor.php">-->
+                <fieldset class="contacto__form">
+                    <legend>
+                        <h2>Contacto</h2>
+                    </legend>
+                    <div class="contacto__form-campos">
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" name="nombre"> <br>
+                        <label for="apellido">Apellido: </label>
+                        <input type="text" name="apellido"> <br>
+                        <label for="asunto">Asunto:  </label>
+                        <input type="text" name="asunto"> <br>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email"> <br>
+                        <label for="telefono">Telefono: </label>
+                        <input type="text" name="telefono"> <br>
+                        <label for="texto">Mensaje:</label>
+                        <textarea name="texto" cols="30" rows="10"></textarea>
+                        <div class="contacto__enviar">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </div>
+                </fieldset>
+                <!--</form>-->
+
+            </section>
+        </section>
+
+
+    </main>
+    <script src="Script/main.js"></script>
+</body>
+
+</html>
