@@ -1,4 +1,5 @@
 @import 'reset.css';
+@import url('https://fonts.googleapis.com/css?family=Courgette|Lora&display=swap');
 * {
     text-decoration: none;
     box-sizing: border-box;
@@ -14,49 +15,71 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #ccc;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/container.jpg);
+    background-size: cover;
 }
 
 #home {
-    background-color: darkgreen;
     min-height: 75vh;
-    margin: 0 1.5rem;
+    margin: 1rem;
+    padding: 30px;
 }
 
 #tecnologias {
-    background-color: cyan;
     min-height: 70vh;
+    margin: 1rem;
+    padding: 1rem;
 }
 
 #contacto {
-    background-color: red;
-    min-height: 72vh;
+    min-height: 67vh;
+    margin: 1rem;
+}
+
+#home,
+#tecnologias,
+#contacto,
+.header {
+    background-color: rgba(204, 204, 204, 0.171);
+    color: white;
+    border-radius: 20px;
+}
+
+#home,
+#tecnologias,
+#contacto {
+    box-shadow: 4px 4px rgba(204, 204, 204, 0.493);
 }
 
 
 /******************HEADER***********************/
 
 .header {
+    font-family: 'Lora', serif;
     display: flex;
     position: relative;
     flex-direction: column;
-    height: 72px;
+    height: 99px;
     overflow: hidden;
-    background-color: #ccc;
+    background-color: rgba(204, 204, 204, 0.171);
     transition: height 0.5s ease;
+    margin: 1rem;
+    color: white;
 }
 
 .header.header--desplegado {
-    height: 120px;
+    height: 135px;
 }
 
 .header__title {
     margin: 0.6rem;
     margin-left: 1.5rem;
+    transition: font-size 1s ease;
 }
 
 .header__subtitle {
     margin-left: 3rem;
+    transition: font-size 1s ease;
 }
 
 
@@ -72,7 +95,8 @@ body {
 
 .menu__icons>img {
     height: 25px;
-    width: 25px;
+    width: 45px;
+    transition: width 1s ease, height 1s ease;
 }
 
 
@@ -108,6 +132,22 @@ aside {
     opacity: 0.8;
 }
 
+.menu__boton {
+    cursor: pointer;
+}
+
+
+/****************   CONTAINER *****************/
+
+#home h2,
+#tecnologias h2,
+.contacto__form h2 {
+    font-family: 'Lora', serif;
+    background-color: rgba(12, 11, 11, 0.514);
+    border-radius: 10px;
+    text-align: center;
+}
+
 
 /******************HOME***********************/
 
@@ -122,6 +162,7 @@ aside {
 
 #home h2 {
     font-size: 2rem;
+    transition: font-size 1s ease;
 }
 
 .home__figure {
@@ -130,29 +171,57 @@ aside {
     border-radius: 50%;
     border: 1px;
     overflow: hidden;
-    max-width: 220px;
+    max-width: 350px;
+    transition: max-width 1s ease;
 }
 
 .home__figure figcaption {
     position: absolute;
-    text-align: center;
     opacity: 0;
     width: 300px;
     height: 80px;
     left: calc(50% - 150px);
-    top: 80%;
+    top: 32%;
+    left: 10%;
     font-size: 0.5rem;
-    transition: opacity 1s ease, font-size 1.5s ease;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.home__figure figcaption {
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
 .home__figure img {
     overflow: hidden;
     width: 100%;
+    filter: sepia(85%);
+    transition: filter 0.5s ease;
+}
+
+.home__figure figcaption a {
+    width: 45px;
+    height: 40px;
 }
 
 .home__figure:hover figcaption {
     opacity: 1;
-    font-size: 1rem;
+}
+
+.home__figure:hover img {
+    filter: none;
+}
+
+.home__biografia_text {
+    font-family: 'Courgette', cursive;
+    transition: font-size 1s ease;
+}
+
+.home__biografia_text,
+.home__biografia_text a {
+    font-size: 1.5rem;
 }
 
 
@@ -161,10 +230,18 @@ aside {
 #tecnologias h2 {
     font-size: 2rem;
     margin: 1.5rem;
+    transition: font-size 1s ease;
 }
 
 .tecnologias__img {
     justify-content: space-around;
+    margin-top: 130px;
+}
+
+.tecnologias__img img {
+    height: 120px;
+    width: 120px;
+    transition: width 1s ease, height 1s ease;
 }
 
 
@@ -176,11 +253,10 @@ aside {
 }
 
 .contacto__form-campos {
-    margin: 2rem;
+    font-family: 'Courgette', cursive;
     display: grid;
     grid-template-columns: 22% repeat(2, 1fr);
-    gap: 0.5rem;
-    margin: 0 auto;
+    gap: 11px;
 }
 
 .contacto__enviar {
@@ -190,6 +266,12 @@ aside {
 
 .contacto__form h2 {
     font-size: 2rem;
+    transition: font-size 1s ease;
+}
+
+label {
+    margin: 0 auto;
+    font-size: 1.2rem;
 }
 
 
@@ -203,19 +285,22 @@ aside {
     }
     #home {
         grid-column: 1 / 3;
+        margin: 1rem;
     }
+    #home h2,
+    #tecnologias h2,
+    .contacto__form h2,
     .header__title {
         font-size: 2rem;
     }
-    .header__subtitle,
     .header.header--desplegado a {
         font-size: 1.2rem;
     }
     .header {
-        height: 113px;
+        height: 100px;
     }
     .header.header--desplegado {
-        height: 160px;
+        height: 140px;
     }
     .header__menu a:hover {
         font-size: 1.5rem;
@@ -250,7 +335,7 @@ aside {
         font-size: 1.5rem;
     }
     .header {
-        height: 136px;
+        height: 130px;
     }
     .header.header--desplegado {
         height: 185px;
@@ -281,17 +366,15 @@ aside {
     #contacto {
         grid-column: 3/4;
         grid-row: 1/2;
-        padding: 4rem;
-    }
-    .contacto__form {
         position: fixed;
-        margin-right: 5rem;
+        left: 69%;
+        max-width: 30rem;
     }
     .header {
-        height: 169px;
+        height: 160px;
     }
     .header.header--desplegado {
-        height: 235px;
+        height: 220px;
     }
     .header__title {
         font-size: 3rem;
@@ -303,12 +386,21 @@ aside {
     .header__menu a:hover {
         font-size: 2.2rem;
     }
-    .home__biografia_text,
-    label {
-        font-size: 1.2rem;
+    .menu__icons {
+        height: 40px;
+        width: 40px;
     }
     .menu__icons>img {
-        height: 30px;
-        width: 30px;
+        height: 36px;
+        width: 32px;
+    }
+    .home__figure figcaption a {
+        width: 50px;
+        height: 50px;
+    }
+    #home h2,
+    #tecnologias h2,
+    .contacto__form h2 {
+        font-size: 3rem;
     }
 }
